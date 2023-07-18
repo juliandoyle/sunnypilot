@@ -184,7 +184,7 @@ def get_car(logcan, sendcan, experimental_long_allowed, num_pandas=1):
 
   if candidate is None:
     cloudlog.event("car doesn't match any fingerprints", fingerprints=fingerprints, error=True)
-    candidate = "VW PASSAT NMS"
+    candidate = "VOLKSWAGEN PASSAT NMS"
 
   CarInterface, CarController, CarState = interfaces[candidate]
   CP = CarInterface.get_params(candidate, fingerprints, car_fw, experimental_long_allowed, docs=False)
