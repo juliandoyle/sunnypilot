@@ -39,9 +39,9 @@ class CarInterface(CarInterfaceBase):
       else:
         ret.transmissionType = TransmissionType.manual
 
-#      if any(msg in fingerprint[1] for msg in (0x1A0, 0xC2)):  # Bremse_1, Lenkwinkel_1
-#        ret.networkLocation = NetworkLocation.gateway
-#      else:
+      if any(msg in fingerprint[1] for msg in (0x1A0, 0xC2)):  # Bremse_1, Lenkwinkel_1
+        ret.networkLocation = NetworkLocation.gateway
+      else:
         ret.networkLocation = NetworkLocation.gateway
 
       # The PQ port is in dashcam-only mode due to a fixed six-minute maximum timer on HCA steering. An unsupported
